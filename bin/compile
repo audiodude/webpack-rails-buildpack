@@ -16,5 +16,7 @@ cd $build_dir
 
 echo "-----> yarn install (with dev dependencies)"
 yarn install --production=false
+echo "-----> bundle install"
+bundle install -j4 --deployment
 echo "-----> bundle exec rake webpack:build"
 bundle exec rake webpack:build --trace
