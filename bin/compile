@@ -14,6 +14,8 @@ env_dir=$3
 
 cd $build_dir
 
+export RAILS_ENV=production
+
 echo "-----> yarn install (with dev dependencies)"
 yarn install --production=false
 echo "-----> bundle install"
